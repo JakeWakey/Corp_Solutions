@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Visitantes - CorpSolutions S.A</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CorpSolutions S.A</h1>
+    </header>
+
+    <section class="container">
+
+        <h2>Registro de Visitantes</h2>
+        <!--Forms de Registro-->
+        <form id="registroForm" novalidate>
+            <div class="form_group">
+                <label for="cedula">Número de Cédula:</label>
+                <input type="text" id="cedula" name="cedula" placeholder="Ingrese su número de cédula">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form_group">
+                <label for="nombre">Nombres:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese sus nombres">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form_group">
+                <label for="apellido">Apellidos:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingrese sus apellidos">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form_group">
+                <lable for="departamento">Departamento que visita:</lable>
+                <select id="departamento" name="departamento">
+                    <option value="">Seleccione un departamento</option>
+                    <option value="ventas">Ventas</option>
+                    <option value="soporte">Crédito</option>
+                    <option value="administracion">Recursos Humanos</option>
+                </select>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form_group">
+                <label for="motivo">Motivo de la visita:</label>
+                <textarea id="motivo" name="motivo" rows="2" placeholder="Ingrese el motivo de su visita"></textarea>
+                <small class="error-message"></small>
+            </div>
+
+            <button type="submit" id="btnRegistrar">Registrar Visita</button>
+        </form>
+
+        <!--Mensaje de confirmación-->
+        <div id="smsConfi" class="success-message"></div>
+
+        <!--Tabla de Registro-->
+    <section class="tabla_registros">
+        <h3>Resumen</h3>
+        <table id="tablaRegistros">
+            <thead>
+                <tr>
+                    <th>Número de Cédula</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Departamento</th>
+                    <th>Motivo de la Visita</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
