@@ -1,0 +1,166 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #f5f7fa;
+  padding: 20px;
+  margin: 0;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+#registroForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form_group label {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form_group input,
+.form_group select,
+.form_group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form_group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.form_group input:focus,
+.form_group select:focus,
+.form_group textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  height: 18px;
+}
+
+#btnRegistrar {
+  grid-column: span 2;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#btnRegistrar:hover {
+  background-color: #3498db;
+}
+
+.success-message {
+  color: #27ae60;
+  background-color: rgba(39, 174, 96, 0.1);
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.tabla_registros {
+  margin-top: 40px;
+}
+
+.tabla_registros h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#tablaRegistros {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tablaRegistros th {
+  background-color: #2c3e50;
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+#tablaRegistros td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+#tablaRegistros tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  #registroForm {
+    grid-template-columns: 1fr;
+  }
+  
+  #btnRegistrar {
+    grid-column: span 1;
+  }
+  
+  #tablaRegistros {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+  
+  #tablaRegistros th,
+  #tablaRegistros td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
